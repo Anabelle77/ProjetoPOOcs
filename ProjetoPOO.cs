@@ -26,7 +26,7 @@ namespace ProjetoPOO
             Cpf = cpf;
             Nome = nome;
             Idade = idade;
-            Vacinado = vacinado;
+            Vacinado = false;
         }
         
         public void EstaVacinado()
@@ -62,7 +62,7 @@ namespace ProjetoPOO
             _cidadaos = new List<Cidadao>();
         }
 
-        public void cadastrarFuncionario()
+        public void CadastrarFuncionario()
         {
             Console.WriteLine("Cadastro de funcionário");
             Console.WriteLine("Nome: ");
@@ -76,7 +76,47 @@ namespace ProjetoPOO
             Console.WriteLine("Cidadão cadastrado com sucesso!");
 
         }
+
+        public void CadastrarCidadao()
+        {
+            Console.WriteLine("Cadastro de cidadão");
+            Console.WriteLine("CPF: ");
+            string cpf = Console.ReadLine();
+            Console.WriteLine("Nome: ");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Idade: ");
+            var idade = int.Parse(Console.ReadLine());
+            
+        }
+        
+        public void Inicio()
+        {
+            while (true)
+            {
+                Console.WriteLine("Digite 1 se vocẽ é um funcionário, 2 se for um cidadão ou 0 para sair:");
+                int escolha = int.Parse(Console.ReadLine());
+                
+                Console.WriteLine("Escolha uma opção:");
+                Console.WriteLine("0 - Sair");
+                Console.WriteLine("1 - Cadastro de Funcionário");
+                Console.WriteLine("2 - Cadastro de Cidadão");
+                Console.WriteLine("3 - Marcar cidadão como vacinado");
+
+                int opcao = int.Parse(Console.ReadLine());
+
+                switch (opcao)
+                {
+                    case 1:
+                        CadastrarFuncionario();
+                        break;
+                }
+            }
+        }
+        public static void Main()
+        {
+            CadastroVacina CadastroVacina = new CadastroVacina();
+            CadastroVacina.Inicio();
+        }
     }
-    
     
 }
