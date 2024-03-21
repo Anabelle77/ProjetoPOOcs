@@ -2,6 +2,7 @@ namespace ProjetoPOO
 {
     public class Funcionario
     {
+        
         public string Nome { get; set; }
         public string Matricula { get; set; }
         public string Cnpj { get; set; }
