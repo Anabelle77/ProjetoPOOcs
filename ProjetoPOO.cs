@@ -120,3 +120,160 @@ namespace ProjetoPOO
     }
     
 }
+
+
+
+
+
+
+
+namespace ProjetoPOO
+{
+    public class CadastroVacina
+    {
+
+        public class Cidadao
+        {
+            public string Cpf { get; set; } = null!;
+            public string Nome { get; set; }
+            public int Idade { get; set; }
+            public bool Vacinado { get; set; }
+
+            public string Senha { get; set; } = null!;
+
+            public Cidadao(string cpf, string nome, int idade, string senha, bool vacinado)
+            {
+                Cpf = cpf;
+                Nome = nome;
+                Idade = idade;
+                Senha = senha;
+                Vacinado = false;
+            }
+        }
+        public class Funcionario
+        {
+            public string Nome { get; set; } = null!;
+            public string Matricula { get; set; }
+            public string Cnpj { get; set; }
+
+            public Funcionario(string nome, string matricula, string cnpj)
+            {
+                
+            }
+        }
+        
+        public void Inicio()
+        {
+            while (true)
+            {
+                Console.WriteLine("Digite 1 se quer entrar como funcionário");
+                Console.WriteLine("Digite  2 se quer entrar como cidadão");
+                Console.WriteLine("Digite 0 para sair");
+                
+
+                int opcao = int.Parse(Console.ReadLine());
+
+                switch (opcao)
+                {
+                    case 1:
+                        PessoaFuncionario();
+                        break;
+                        
+                }
+            }
+        }
+        
+        public void PessoaFuncionario()
+        {
+            Console.Clear();
+            string? nome;
+            string? matricula;
+            
+            Console.WriteLine("Qual seu nome?: ");
+            nome = Console.ReadLine();
+            
+            Console.WriteLine("Qual sua matrícula?");
+            matricula = Console.ReadLine();
+
+            var funcionario = _funcionarios.Add();
+
+        }
+
+        List<Funcionario> _funcionarios = new List<Funcionario>();
+        List<Cidadao> _cidadaos = new List<Cidadao>();
+
+        public CadastroVacina()
+        {
+            _funcionarios = new List<Funcionario>();
+            _cidadaos = new List<Cidadao>();
+        }
+
+        
+    }
+            
+    int opcao = int.Parse(Console.ReadLine());
+            
+    switch (opcao)
+    {
+        case 1:
+            Console.WriteLine("Nome: Anabelle");
+            Console.WriteLine("");
+            break;
+                        
+    }
+    Console.WriteLine("Cidadão cadastrado com sucesso!");
+}
+        
+private bool UserExistente(string cpf)
+{
+    return _cidadaos.Any(u => u.Nome == nome.ToLower());
+}
+
+public void CadastrarCidadao()
+{
+    Console.WriteLine("Cadastro de cidadão");
+    Console.WriteLine("CPF: ");
+    string cpf = Console.ReadLine();
+    Console.WriteLine("Nome: ");
+    string nome = Console.ReadLine();
+    Console.WriteLine("Idade: ");
+    var idade = int.Parse(Console.ReadLine());
+            
+}
+        
+        
+public static void Main()
+{
+    CadastroVacina CadastroVacina = new CadastroVacina();
+    CadastroVacina.Inicio();
+}
+}
+    
+
+    
+        
+public void EstaVacinado()
+{
+    Console.WriteLine("A pessoa está vacinada? (Digite 'sim' ou 'nao'):");
+    string resposta = Console.ReadLine().ToLower();
+
+    if (resposta == "sim")
+    {
+        Vacinado = true;
+                
+    }
+    else if (resposta == "nao")
+    {
+        Vacinado = false;
+    }
+    else
+    {
+        Console.WriteLine("Resposta inválida. Por favor, digite 'sim' ou 'nao'.");
+        EstaVacinado();
+    }
+}
+}
+
+    
+    
+}
