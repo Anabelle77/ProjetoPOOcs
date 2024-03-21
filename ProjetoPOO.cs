@@ -241,7 +241,7 @@ public void CadastrarCidadao()
     var idade = int.Parse(Console.ReadLine());
             
 }
-        
+    
         
 public static void Main()
 {
