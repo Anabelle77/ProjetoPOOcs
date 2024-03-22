@@ -165,4 +165,34 @@ class Program
     }
 }
 
+class Cidadao
+{
+    public string Nome { get; }
+    public int Idade { get; }
+    public string CPF { get; }
+    public bool Vacinado { get; }
 
+    public Cidadao(string nome, string cpf, int idade, bool vacinado)
+    {
+        Nome = nome;
+        CPF = cpf;
+        Idade = idade;
+        Vacinado = vacinado;
+    }
+
+    public Cidadao(string nome, string cpf) : this(nome, cpf, 0, false) { }
+}
+
+class Funcionario
+{
+    public string Nome { get; }
+    public string Matricula { get; }
+    public string CNPJ { get; }
+
+    public Funcionario(string nome, string matricula, string cnpj)
+    {
+        Nome = nome;
+        Matricula = matricula;
+        CNPJ = cnpj;
+    }
+}
